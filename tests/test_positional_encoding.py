@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import torch
 from positional_encodings.torch_encodings import PositionalEncoding1D, Summer
 
@@ -17,8 +18,16 @@ def test_positional_encoding():
     D = 128
     x = torch.randn([batch, seq, D])
     encodings = get_encodings("encoding_only", D)
+
     encodings_summed = get_encodings("summed_encoding", D)
     out = encodings(x)
+    f, ax = plt.subplots(1, 1, figsize=(20, 10))
+    ax.plot(out.detach().numpy()[0, :, :])
+    ax.set_title("Positional Encoding")
+    ax.set_xlabel("Sequence")
+    ax.set_ylabel(f"Encoding-Dim.{D} values")
+    plt.tight_layout()
+    plt.savefig("positional_encoding.png", dpi=300)
     out_summed = encodings_summed(x)
     assert out.shape == x.shape
     assert out_summed.shape == x.shape
