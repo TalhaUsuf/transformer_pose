@@ -11,3 +11,6 @@ install it using:
 ```bash
 pip install positional-encodings[pytorch,tensorflow]
 ```
+
+plot of positional encoding is shown:
+![](positional_encoding.png)
