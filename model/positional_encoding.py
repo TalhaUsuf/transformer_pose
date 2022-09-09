@@ -8,6 +8,12 @@ def get_encodings(enc_type: str, d_model: int) -> Union[PositionalEncoding1D, Su
     Returns the positional encoding function for the given type and d_model
     it can return the `encoding` or the `vector + encoding(vector)`
 
+    Notes
+    -----
+    input should be (batchsize, x, ch) where x is the sequence length
+    and encodings are added to the ch dimension
+
+
     Parameters
     ----------
     enc_type : str
