@@ -12,5 +12,5 @@ def test_transformer_model():
     # sample input
     x = torch.randn([Batch, Seq, dim])
     out = trf_model(x)
-    assert out.shape == x.shape, f"output shape should be same as input shape, but found {out.shape} and {x.shape}"
+    assert out.shape == torch.Size([Batch, 1]), f"output shape should be [batch size, 1], but found {out.shape} and {x.shape}"
     assert out.dtype == x.dtype, f"output dtype should be same as input dtype, but found {out.dtype} and {x.dtype}"

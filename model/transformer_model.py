@@ -21,7 +21,10 @@ class transformer_model(torch.nn.Module):
 
         self.encoder = torch.nn.TransformerEncoder(encoder_layer=self.encoder_layer, num_layers=self.num_layers, norm=None)
 
+        # positonal encodings layer
         self.pe = get_encodings("summed_encoding", self.d_model)
+        #     linear layer which will classify if the user has fallen or not
+        self.classifier = torch.nn.Linear(self.d_model, 1)
 
     def forward(self, x):
         """
@@ -40,4 +43,7 @@ class transformer_model(torch.nn.Module):
         # add Positional encodings to pose vector
         x = self.pe(x)
         x = self.encoder(x)  # [batch, seq, d_model]
+        # sum along sequence dimension
+        x = torch.sum(x, dim=1)  # [batch, d_model]
+        x = self.classifier(x)  # [batch, 1]
         return x
