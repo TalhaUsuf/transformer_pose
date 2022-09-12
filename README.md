@@ -1,4 +1,4 @@
-
+![Build Status]("https://github.com/TalhaUsuf/transformer_pose/workflows/Fall_Detection/badge.svg")
 
 # Positional Encoding Understanding 🕸
 > PE layer needs input to be `[Batch, Seq_len, Embedding_dim]` and output is `[Batch, Seq_len, Embedding_dim]`
