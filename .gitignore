@@ -141,3 +141,6 @@ cython_debug/
 .idea
 *.csv
 dataset.csv
+!/dataset/
+!/dataset/__init__.py
+!/dataset/generate_dataset.py
