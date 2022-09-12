@@ -1,4 +1,9 @@
-# Positional Encoding Understanding 🕸 [![Fall_Detection](https://github.com/TalhaUsuf/transformer_pose/actions/workflows/fall_detection.yml/badge.svg?branch=master)](https://github.com/TalhaUsuf/transformer_pose/actions/workflows/fall_detection.yml)
+# Fall Detection App [![Fall_Detection](https://github.com/TalhaUsuf/transformer_pose/actions/workflows/fall_detection.yml/badge.svg?branch=master)](https://github.com/TalhaUsuf/transformer_pose/actions/workflows/fall_detection.yml)
+This app uses a transformer based model (original implementation 2017 paper) to take `128D` pose vector at its input
+and output a score regarding whether the person is falling or not.
+
+The model is trained on a dataset of 1000 videos. Dummy dataset has been created in the form of a **csv** file
+# Positional Encoding Understanding 🕸
 > PE layer needs input to be `[Batch, Seq_len, Embedding_dim]` and output is `[Batch, Seq_len, Embedding_dim]`
 
 ![](img.png)
