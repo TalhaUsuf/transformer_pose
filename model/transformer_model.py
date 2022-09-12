@@ -1,3 +1,8 @@
+"""
+this script defines transformer model. implementation is the same as of 2017 Vaswani paper.
+this uses pytorch implementation as the base.
+"""
+
 import torch
 
 from .positional_encoding import get_encodings
@@ -10,6 +15,18 @@ class transformer_model(torch.nn.Module):
     """
 
     def __init__(self, d_model: int, nhead_attention: int, dim_feedforward: int, dropout: float = 0.25, activation: str = "relu", encoder_layers: int = 6):
+        """
+        initializer of the transformer model
+
+        Parameters
+        ----------
+        d_model : int
+        nhead_attention : int
+        dim_feedforward : int
+        dropout : float, optional
+        activation : str, optional
+        encoder_layers : int, optional
+        """
         super().__init__()
         self.d_model = d_model
         self.nhead = nhead_attention
