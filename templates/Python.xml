@@ -1,0 +1,27 @@
+<templateSet group="Python">
+  <template name="comment" value="# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%&#10;#                      $comment$   &#10;# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="comment" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="abseil" value="import json&#10;import yaml&#10;from absl import flags, app&#10;from absl.flags import FLAGS &#10;&#10;&#10;flags.DEFINE_string(&quot;conf&quot;, &quot;config.yaml&quot;, help=&quot;path to the config.yaml file&quot;)&#10;&#10;def main(argv):&#10;    &#10;        &#10;&#10;if __name__ == '__main__':&#10;    app.run(main)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="rul" value="Console().rule(title=f&quot;[red]$desc1$ [yellow] $desc2$ [magenta] $desc3$&quot;, characters=&quot;=&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="desc1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="desc2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="desc3" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="log_rich" value="import logging&#10;from rich.logging import RichHandler&#10;&#10;# for writing to a file&#10;file_handler = logging.FileHandler(&quot;debug.log&quot;)&#10;file_handler.setLevel(logging.DEBUG)&#10;fmt_file = '%(levelname)s @ %(asctime)s ==&gt; [%(filename)s--&gt;%(funcName)s--&gt;%(lineno)d] %(message)s'&#10;file_formatter = logging.Formatter(fmt_file)&#10;file_handler.setFormatter(file_formatter)&#10;# end for writing to a file&#10;&#10;FORMAT = '%(module)s ---&gt; %(funcName)s:  %(message)s'&#10;logging.basicConfig(&#10;    level=&quot;NOTSET&quot;, format=FORMAT,&#10;    datefmt=&quot;%Y-%m-%d   %H:%M:%S.%f&quot;,&#10;    handlers=[RichHandler()]&#10;)&#10;&#10;&#10;&#10;log = logging.getLogger(&quot;rich&quot;)&#10;log.info(&quot;$text$&quot;, extra={&quot;color&quot;: &quot;green&quot;, &quot;markup&quot;: True})&#10;" description="logging using rich library" toReformat="false" toShortenFQNames="true">
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
