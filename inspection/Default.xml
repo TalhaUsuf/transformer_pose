@@ -3,7 +3,7 @@
   <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
     <option name="ignoredPackages">
       <value>
-        <list size="168">
+        <list size="170">
           <item index="0" class="java.lang.String" itemvalue="munkres" />
           <item index="1" class="java.lang.String" itemvalue="logger" />
           <item index="2" class="java.lang.String" itemvalue="mxnet" />
@@ -172,6 +172,8 @@
           <item index="165" class="java.lang.String" itemvalue="pycparser" />
           <item index="166" class="java.lang.String" itemvalue="idna" />
           <item index="167" class="java.lang.String" itemvalue="cffi" />
+          <item index="168" class="java.lang.String" itemvalue="fsspec" />
+          <item index="169" class="java.lang.String" itemvalue="attrs" />
         </list>
       </value>
     </option>
