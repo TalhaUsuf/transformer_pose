@@ -1,0 +1,9 @@
+<application>
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1b03d9ef-61a3-438a-8306-e446621d21d8" name="dev-ai@10.0.0.23:22 password">
+        <fileTransfer accessType="SFTP" host="10.0.0.23" port="22" sshConfigId="411feb61-7d57-4e36-8fc9-a0e93bb608ae" sshConfig="dev-ai@10.0.0.23:22 password" />
+      </webServer>
+    </option>
+  </component>
+</application>
